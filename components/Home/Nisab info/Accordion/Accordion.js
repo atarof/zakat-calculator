@@ -1,12 +1,15 @@
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import { Div, Accord, Expand } from './Accordion.styled'
+import { Accord, Expand } from './Accordion.styled'
+import {Div} from './Accordinadiv.styled'
 export function AccordianInfo() {
     
 return (
   <Div>
     <Accord>
-      <AccordionSummary expandIcon={<Expand />}>Nisab calculation</AccordionSummary>
+      <AccordionSummary sx={{ '.MuiAccordionSummary-content': { justifyContent: 'center' } }} expandIcon={<Expand />}>
+        Nisab calculation
+      </AccordionSummary>
       <AccordionDetails>
         Nisab: the threshold amount by which Zakāh becomes compulsory <br /> <br /> The Nisab for gold and silver is 85
         grams and 595 grams respectively. To determine the Nisab for monetary savings, the price of gold per gram for
@@ -14,7 +17,12 @@ return (
       </AccordionDetails>
     </Accord>
     <Accord>
-      <AccordionSummary expandIcon={<Expand />} aria-controls="panel2a-content" id="panel2a-header">
+      <AccordionSummary
+        sx={{ '.MuiAccordionSummary-content': { justifyContent: 'center' } }}
+        expandIcon={<Expand />}
+        aria-controls="panel2a-content"
+        id="panel2a-header"
+      >
         Zakat calculation
       </AccordionSummary>
       <AccordionDetails>

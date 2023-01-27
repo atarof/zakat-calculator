@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import InfoOutlined from '@mui/icons-material/InfoOutlined'
-import Button from '@material-ui/core/Button'
+import Button from '@mui/material/Button'
 import { Field } from 'formik'
 
 export const Form = styled.form`
