@@ -56,26 +56,20 @@ export const CalculatorForm = ({ silverNisab }) => {
           <Input
             name="goldSilver"
             type="number"
-            placeholder="Gold and Silver"
+            placeholder="£"
             onChange={formik.handleChange}
             value={formik.values.goldSilver}
           />
           {formik.touched.goldSilver && formik.errors.goldSilver ? <Error>{formik.errors.goldSilver}</Error> : null}
 
           <label htmlFor="Cash">Cash</label>
-          <Input
-            name="cash"
-            type="number"
-            placeholder="Cash"
-            onChange={formik.handleChange}
-            value={formik.values.cash}
-          />
+          <Input name="cash" type="number" placeholder="£" onChange={formik.handleChange} value={formik.values.cash} />
           {formik.touched.cash && formik.errors.cash ? <Error>{formik.errors.cash}</Error> : null}
           <label htmlFor="buisnessAssets">Buisness assets</label>
           <Input
             name="buisnessAssets"
             type="number"
-            placeholder="Buisness assets"
+            placeholder="£"
             onChange={formik.handleChange}
             value={formik.values.buisnessAssets}
           />
@@ -86,7 +80,7 @@ export const CalculatorForm = ({ silverNisab }) => {
           <Input
             name="liabilities"
             type="number"
-            placeholder="Short term liabilities"
+            placeholder="£"
             onChange={formik.handleChange}
             value={formik.values.liabilities}
           />
