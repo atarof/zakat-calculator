@@ -30,16 +30,14 @@ export const CalculatorForm = ({ silverNisab }) => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       const total = values.buisnessAssets + values.cash + values.goldSilver - values.liabilities
-      const totalDue = Math.round(
-        (values.buisnessAssets + values.cash + values.goldSilver - values.liabilities) * 0.025
-      )
+      const totalamount = (values.buisnessAssets + values.cash + values.goldSilver - values.liabilities) * 0.025
+      const totalDue = totalamount.toFixed(2)
+      
       //check to see if the total amount is greater then the minimum nisab
       if (total >= silverNis) {
         calculateAmount(`Zakat due: £${totalDue}`)
-        console.log(silverNis)
       } else {
         calculateAmount('Your total has not reached the minimum nisab')
-         console.log(silverNis)
       }
       handleScroll(dueFocus.current)
     },
