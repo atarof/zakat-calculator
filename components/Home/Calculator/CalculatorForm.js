@@ -63,7 +63,7 @@ export const CalculatorForm = ({ silverNisab }) => {
           <label htmlFor="Cash">Cash</label>
           <Input name="cash" type="number" placeholder="£" onChange={formik.handleChange} value={formik.values.cash} />
           {formik.touched.cash && formik.errors.cash ? <Error>{formik.errors.cash}</Error> : null}
-          <label htmlFor="buisnessAssets">Buisness assets</label>
+          <label htmlFor="buisnessAssets">Business assets</label>
           <Input
             name="buisnessAssets"
             type="number"
