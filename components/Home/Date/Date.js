@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { fetchHijriDate } from '../../../lib/api'
-import { H3 } from '../Date/date.styled'
+import { H3 } from './Date.styled'
 export function Date() { 
     const [date, setDate] = useState([])
     const [isPending, setIsPending] = useState(true)
