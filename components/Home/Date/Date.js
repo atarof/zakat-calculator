@@ -10,7 +10,7 @@ export function Date() {
     async function getDate() {
        const data =  fetchHijriDate()
       data.then((res) => {
-        const hijriday = ++ res.data.hijri.day 
+        const hijriday = res.data.hijri.day 
             setDate(hijriday + ' ' + ' ' + res.data.hijri.month.en + ' ' + res.data.hijri.year)
             setError(false)
             setIsPending(false)
