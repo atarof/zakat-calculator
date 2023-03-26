@@ -84,3 +84,6 @@ export const ResetButton = styled(Button)`
 export const Error = styled.div`
   color: red;
 `
+export const Span = styled.span`
+  color: #fcd9b8;
+`

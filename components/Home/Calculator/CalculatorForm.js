@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Form, Div, Input, Due, SubmitButton, Error, H3, ResetButton } from '../Calculator/CalculatorForm.styled'
+import { Form, Div, Input, Due, SubmitButton, Error, H3, ResetButton, Span } from '../Calculator/CalculatorForm.styled'
 import { useFormik, Formik } from 'formik'
 import * as yup from 'yup'
 
@@ -22,10 +22,10 @@ export const CalculatorForm = ({ silverNisab }) => {
 
   const formik = useFormik({
     initialValues: {
-      goldSilver: '',
-      cash: '',
-      buisnessAssets: '',
-      liabilities: ''
+      goldSilver: 0,
+      cash: 0,
+      buisnessAssets: 0,
+      liabilities: 0
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
@@ -47,7 +47,9 @@ export const CalculatorForm = ({ silverNisab }) => {
   })
   return (
     <Div>
-      <H3>Enter amounts below</H3>
+      <H3>
+        Enter amounts below in <Span>GBP</Span>
+      </H3>
       <Formik>
         <Form onSubmit={formik.handleSubmit} onReset={formik.handleReset}>
           <label htmlFor="goldSilver">Gold and Silver</label>
