@@ -21,3 +21,6 @@ export const Nisab = styled.span`
 export const Ermes = styled.span`
 color: red
 `
+export const Span = styled.span`
+  color: #fcd9b8;
+`

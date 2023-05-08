@@ -7,15 +7,16 @@ export const Form = styled.form`
   width: 30%;
   background-color: inherit;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0 auto;
+  margin: auto;
+  @media only screen and (max-width: 480px) {
+    width: 80%;
+  }
 `
 export const Div = styled.div`
   border-radius: 5px;
@@ -23,9 +24,9 @@ export const Div = styled.div`
   padding: 20px;
   justify-content: center;
   text-align: center;
-  vertical-align: middle;
   background-color: inherit;
-`;
+  align-items: center;
+`
 
 export const Input = styled(Field)`
   width: 100%;
@@ -35,9 +36,7 @@ export const Input = styled(Field)`
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-`
-export const H3 = styled.h3`
-  color: white;
+  
 `
 export const Information = styled.h4`
   color: #f9ebc8;
@@ -83,7 +82,4 @@ export const ResetButton = styled(Button)`
 
 export const Error = styled.div`
   color: red;
-`
-export const Span = styled.span`
-  color: #fcd9b8;
 `
