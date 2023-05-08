@@ -35,7 +35,7 @@ return (
         gold). If a person's savings reaches this amount and more (£850+), whilst a whole lunar year has passed, they
         must pay 2.5% from this. In this case the zakat to pay would be £21.25 <br /> <br />
         Example for silver: <br /> <br /> If the price of silver per gram in the UK is £1. The Nisab for silver would be
-        £5 x 595( grams of silver). If a person's savings reaches this amount and more (£595+), whilst a whole lunar
+        £1 x 595( grams of silver). If a person's savings reaches this amount and more (£595+), whilst a whole lunar
         year has passed, they must pay 2.5% from this. In this case the zakat to pay would be £14.87 <br /> <br />
         This calculator focuses on monetary savings, for zakat concerning livestock, properties etc scholarly advice
         should be sought.
