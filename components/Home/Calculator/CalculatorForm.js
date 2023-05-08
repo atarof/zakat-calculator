@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react'
-import { Form, Div, Input, Due, SubmitButton, Error, H3, ResetButton, Span } from '../Calculator/CalculatorForm.styled'
+import { Form, Div, Input, Due, SubmitButton, Error,  ResetButton, Span } from '../Calculator/CalculatorForm.styled'
 import { useFormik, Formik } from 'formik'
 import * as yup from 'yup'
 
-export const CalculatorForm = ({ silverNisab }) => {
+export const CalculatorForm = ({ silverNisab, currency }) => {
   const [dueAmount, calculateAmount] = useState('')
   //convert silver price into floating number to remove "£" sign
   const silverNis = parseFloat(silverNisab.toString().substring(1))
@@ -32,10 +32,10 @@ export const CalculatorForm = ({ silverNisab }) => {
       const total = values.buisnessAssets + values.cash + values.goldSilver - values.liabilities
       const totalamount = (values.buisnessAssets + values.cash + values.goldSilver - values.liabilities) * 0.025
       const totalDue = totalamount.toFixed(2)
-      
+
       //check to see if the total amount is greater then the minimum nisab
       if (total >= silverNis) {
-        calculateAmount(`Zakat due: £${totalDue}`)
+        calculateAmount(`Zakat due: ${currency}${totalDue}`)
       } else {
         calculateAmount('Your total has not reached the minimum nisab')
       }
@@ -47,16 +47,12 @@ export const CalculatorForm = ({ silverNisab }) => {
   })
   return (
     <Div>
-      <H3>
-        Enter amounts below in <Span>GBP</Span>
-      </H3>
       <Formik>
         <Form onSubmit={formik.handleSubmit} onReset={formik.handleReset}>
           <label htmlFor="goldSilver">Gold and Silver</label>
           <Input
             name="goldSilver"
             type="number"
-            placeholder="£"
             onChange={formik.handleChange}
             value={formik.values.goldSilver}
           />
@@ -69,7 +65,6 @@ export const CalculatorForm = ({ silverNisab }) => {
           <Input
             name="buisnessAssets"
             type="number"
-            placeholder="£"
             onChange={formik.handleChange}
             value={formik.values.buisnessAssets}
           />
@@ -80,7 +75,6 @@ export const CalculatorForm = ({ silverNisab }) => {
           <Input
             name="liabilities"
             type="number"
-            placeholder="£"
             onChange={formik.handleChange}
             value={formik.values.liabilities}
           />
